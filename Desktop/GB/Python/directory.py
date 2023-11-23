@@ -99,10 +99,11 @@ def find_by_number(phone_book,number):
                 print(element[k], end ='')
 
 def change_number(phone_book,last_name,new_number):
+    new_data=''
     for element in phone_book:
         if element['Фамилия'] == last_name:
             element['Телефон'] = new_number
-            new_data=''
+            
             delete_by_lastname('phonebook.txt',last_name)
             for key in element.keys():
                 new_data += element[key]+', '
